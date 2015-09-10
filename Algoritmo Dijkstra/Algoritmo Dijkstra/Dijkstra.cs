@@ -105,7 +105,7 @@ namespace Algoritmo_Dijkstra
 
             Console.WriteLine
                 ("La solucion de la ruta mas corta tomando como nodo inicial el Nodo 1 es: ");
-
+            
             int nodo = 1;
             foreach(int i in prueba.D)
             {
