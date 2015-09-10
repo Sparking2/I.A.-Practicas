@@ -4,8 +4,11 @@ using System.Text;
 
 namespace Algoritmo_Dijkstra
 {
-    class Program
-    {
+    class Dijkstra
+    { //variables a usar
+        private int rango = 0;
+        private int[,] L; //Matriz de adyacencia
+
         static void Main(string[] args)
         {
         }
