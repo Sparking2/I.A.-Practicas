@@ -35,8 +35,87 @@ namespace Algoritmo_Dijkstra
             for (int i = 1; i < rango; i++)
                 D[i] = L[0, i];
         }
+
+        //Rutina de solución Dijkstra
+        public void SolDijkstra()
+        {
+            int minValor = Int32.MaxValue;
+            int minNodo = 0;
+
+            for(int i = 0;i<rango;i++)
+            {
+                if (C[i] == -1)
+                    continue;
+                if (D[i] > 0 && D[i] < minValor)
+                {
+                    minValor = D[i];
+                    minNodo = i;
+                }
+            }
+            C[minNodo] = -1;
+            for (int i = 0; i<rango;i++)
+            {
+                if (L[minNodo, i] < 0)   //si no existe arco
+                    continue;
+                if (D[i]<0)             //si no hay peso asignado
+                {
+                    D[i] = minValor + L[minNodo, i];
+                    continue;
+                }
+                if ((D[minNodo] + L[minNodo, i]) < D[i])
+                    D[i] = minValor + L[minNodo, i];
+            }
+        }
+
+        //Función de implementación del algoritmo
+        public void CorrerDijkstra()
+        {
+            for (trango = 1; trango<rango;trango++)
+            {
+                SolDijkstra();
+                Console.WriteLine("Iteracion No. " + trango);
+                Console.WriteLine("Matriz de distancias: ");
+
+                for (int i = 0; i < rango; i++)
+                    Console.WriteLine(i + " ");
+
+                Console.WriteLine(" ");
+
+                for (int i = 0; i < rango; i++)
+                    Console.Write(D[i] + " ");
+
+                Console.WriteLine(" ");
+                Console.WriteLine(" ");
+            }
+        }
         static void Main(string[] args)
         {
+            //Definicion de la matriz de Adyacencia
+            int[,] L = {
+                          {-1,10,18,-1,-1,-1,-1},
+                          {-1,-1,  6,-1,3,-1,-1},
+                          {-1,-1,-1, 3,-1,20,-1},
+                          {-1,-1, 2,-1,-1,-1, 2},
+                          {-1,-1,-1, 6,-1,-1,10},
+                          {-1,-1,-1,-1,-1,-1,-1},
+                          {-1,-1,10,-1,-1, 5,-1}
+                      };
+            Dijkstra prueba = new Dijkstra((int)Math.Sqrt(L.Length),L);
+            prueba.CorrerDijkstra();
+
+            Console.WriteLine
+                ("La solucion de la ruta mas corta tomando como nodo inicial el Nodo 1 es: ");
+
+            int nodo = 1;
+            foreach(int i in prueba.D)
+            {
+                Console.Write("Distancia minima a nodo " + nodo + " es ");
+                Console.WriteLine(i);
+                nodo++;
+            }
+            Console.WriteLine();
+            Console.WriteLine("Presiona enter para Salir.");
+            Console.Read();
         }
     }
 }

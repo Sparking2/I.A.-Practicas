@@ -1,0 +1,5 @@
+C:\Users\spark_000\Documents\GitHub\I.A.-Practicas\Algoritmo Dijkstra\Algoritmo Dijkstra\bin\Debug\Algoritmo Dijkstra.exe
+C:\Users\spark_000\Documents\GitHub\I.A.-Practicas\Algoritmo Dijkstra\Algoritmo Dijkstra\bin\Debug\Algoritmo Dijkstra.pdb
+C:\Users\spark_000\Documents\GitHub\I.A.-Practicas\Algoritmo Dijkstra\Algoritmo Dijkstra\obj\Debug\Algoritmo Dijkstra.csprojResolveAssemblyReference.cache
+C:\Users\spark_000\Documents\GitHub\I.A.-Practicas\Algoritmo Dijkstra\Algoritmo Dijkstra\obj\Debug\Algoritmo Dijkstra.exe
+C:\Users\spark_000\Documents\GitHub\I.A.-Practicas\Algoritmo Dijkstra\Algoritmo Dijkstra\obj\Debug\Algoritmo Dijkstra.pdb
