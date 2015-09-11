@@ -12,6 +12,7 @@ namespace Algoritmo_Dijkstra
         private int[] D; //Arreglo de Distancias
         private int trango = 0;
         
+        
         //Algoritmo Dijkstra
         public Dijkstra(int paramRango, int[,]paramArreglo)
         {
@@ -19,7 +20,7 @@ namespace Algoritmo_Dijkstra
             C = new int[paramRango];
             D = new int[paramRango];
             rango = paramRango;
-
+            //llenamos la matris L con los datos que trabajaremos
             for (int i=0;i<rango;i++)
             {
                 for (int j = 0;j<rango;j++)
@@ -27,11 +28,13 @@ namespace Algoritmo_Dijkstra
                     L[i, j] = paramArreglo[i, j];
                 }
             }
-            for (int i = 0;i<rango;i++)
+            for (int i = 1;i<rango;i++)
             {
                 C[i] = i;
             }
+            //Evaluamos la distancia de los nodos adyacentes
             C[0] = -1;
+            //rango = nodo destino...
             for (int i = 1; i < rango; i++)
                 D[i] = L[0, i];
         }
@@ -103,19 +106,39 @@ namespace Algoritmo_Dijkstra
             Dijkstra prueba = new Dijkstra((int)Math.Sqrt(L.Length),L);
             prueba.CorrerDijkstra();
 
-            Console.WriteLine
-                ("La solucion de la ruta mas corta tomando como nodo inicial el Nodo 1 es: ");
-            
+            Console.WriteLine("La solucion de la ruta mas corta tomando como nodo inicial el Nodo 1 es: ");
+
+            /*
+             //Versión solo el nodo buscado
+             
+             int user_input = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+
             int nodo = 1;
             foreach(int i in prueba.D)
             {
-                Console.Write("Distancia minima a nodo " + nodo + " es ");
-                Console.WriteLine(i);
+                if (nodo == user_input)
+                {
+                    Console.Write("Distancia minima a nodo " + nodo + " es ");
+                    Console.WriteLine(i);
+
+                }
                 nodo++;
+            }*/
+
+            int nodo = 1;
+            foreach(int i in prueba.D)
+            { 
+                    Console.Write("Distancia minima a nodo " + nodo + " es ");
+                    Console.WriteLine(i);
+                    nodo++;
             }
+            
+            
             Console.WriteLine();
-            Console.WriteLine("Presiona enter para Salir.");
-            Console.Read();
+            Console.WriteLine("Presiona e para Salir.");
+            Console.ReadKey();
         }
     }
 }
