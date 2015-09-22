@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dijkstra.Properties {
+namespace Algoritmo_de_Prim.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Dijkstra.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Dijkstra.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Algoritmo_de_Prim.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,21 +61,11 @@ namespace Dijkstra.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _2000px_Ryanair_Logo_svg {
-            get {
-                object obj = ResourceManager.GetObject("_2000px_Ryanair_Logo_svg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Icon seo_logo_200 {
+        internal static System.Drawing.Icon icono {
             get {
-                object obj = ResourceManager.GetObject("seo_logo_200", resourceCulture);
+                object obj = ResourceManager.GetObject("icono", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

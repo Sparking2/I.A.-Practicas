@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Algoritmo Dijkstra")]
+[assembly: AssemblyTitle("Algoritmo de Prim")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Algoritmo Dijkstra")]
+[assembly: AssemblyProduct("Algoritmo de Prim")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
-[assembly: Guid("b7995164-e039-4fa4-bc4a-5b6804e525c4")]
+[assembly: Guid("c216fda3-a5d6-41e8-8f48-7e6a2adb6899")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
